@@ -95,6 +95,7 @@ nav {
   display: flex;
   border-bottom: 1px solid var(--border-colour);
   min-height: 120px;
+  z-index: 2;
 }
 
 #nav-logo {
@@ -135,7 +136,6 @@ nav {
   align-items: center;
   background-color: transparent;
   border: none;
-  border-left: 1px solid var(--border-color);
   color: white;
   cursor: pointer;
   display: none;
@@ -149,7 +149,7 @@ nav {
 }
 
 #nav-button:hover, #nav-button:hover > span {
-  color: var(--hover-colour);
+  color: var(--hover-colour) !important;
 }
 
 #nav-toggle-button > span,
@@ -191,7 +191,6 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 2rem;
 }
 
 #about-contact {
@@ -212,8 +211,10 @@ main {
 }
 
 #about-png {
-  max-height: 400px;
-  max-width: 400px;
+  max-height: 300px;
+  max-width: 300px;
+  border-radius: 50%;
+  border: 10px solid var(--border-colour);
 }
 
 #about-section p {
@@ -225,7 +226,7 @@ main {
 #about-info {
   font-style: italic;
   border: 1px solid var(--border-colour);
-  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 #about-info p {
@@ -280,11 +281,11 @@ main {
   }
 
   #about-styling h2{
-    font-size: 2em;
+    font-size: 1.8em;
   }
 
   #about-styling p{
-    font-size: 1.15em;
+    font-size: 1em;
   }
 
   #about-styling h3{
@@ -300,7 +301,13 @@ main {
   }
 
   #about-section p {
-    font-size: 1.15em;
+    font-size: 1em;
+  }
+
+  #about-png {
+    max-height: 230px;
+    max-width: 230px;
+    border: 6px solid var(--border-colour);
   }
 }
 
@@ -381,6 +388,12 @@ main {
   #about-section p {
     font-size: 0.75em;
   }
+
+  #about-png {
+    max-height: 150px;
+    max-width: 150px;
+    border: 6px solid var(--border-colour);
+  }
 }
 
 @media(max-width: 682px) {
@@ -431,46 +444,55 @@ main {
 
   #about-section { 
     max-width: 27rem;
+    position: relative;
   }
 
   #about-short-greeting {
     flex-direction: column;
     margin: 0;
+    justify-content: center;
+    align-items: center;
+    position: relative;
   }
 
   #about-png {
-    max-height: 250px;
-    max-width: 250px;
+    max-height: 115px;
+    max-width: 115px;
+    position: absolute;
+    top: 40%;
+    left: 85%;
+    transform: translateX(-50%);
+    z-index: 1;
   }
 
   #about-styling h2{
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
 
   #about-styling h3{
-    font-size: 1.2em;
-  }
-
-  address a {
     font-size: 1.1em;
   }
 
+  address a {
+    font-size: 0.9em;
+  }
+
   .linkedin {
-    font-size: 2.5em;
+    font-size: 1.7em;
     padding-right: 0px;
   }
 
   .mail {
-    font-size: 2em;
+    font-size: 1.6em;
     padding-left: 15px;
   }
 
   #about-styling p {
-    font-size: 1.2em;
+    font-size: 0.9em;
   }
 
   #about-info p{
-    font-size: 1.1em;
+    font-size: 0.8em;
   }
 }
 
@@ -493,6 +515,13 @@ main {
 
   address a {
     font-size: 0.75em;
+  }
+
+  #about-png {
+    max-height: 80px;
+    max-width: 80px;
+    top: 42.5%;
+    left: 85%;
   }
 
   .linkedin {
@@ -518,9 +547,16 @@ main {
     .linkedin {
       font-size: 1.7em;
     }
-  
-    #about-info {
-      margin: 0;
+
+    #about-png {
+      max-height: 75px;
+      max-width: 75px;
+    }
+  }
+  @media(max-width: 320px) {
+    #about-png {
+      top: 55%;
+      left: 85%;
     }
   }
 }
