@@ -25,9 +25,16 @@ function updateContent() {
     textToType = "Hello! I'm <span class='strong-highlight'>Tristan Lingat</span>.";
 
     typeText(heading, textToType);
-}
 
-/* Mobile Nav */
+    var navLinks = document.querySelectorAll('#nav-links a');
+    navLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+            if (window.innerWidth <= 682) {
+                responsiveNav();
+            }
+        });
+    });
+}
 
 const nav = document.querySelector('nav');
 const responsiveNav = () => {

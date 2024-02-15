@@ -172,7 +172,7 @@ main {
 
 #about-content {
   display: flex;
-  height: 100%;
+  min-height: 100%;
   margin-inline: auto;
   justify-content: center;
   align-items: center;
@@ -211,8 +211,8 @@ main {
 }
 
 #about-png {
-  max-height: 300px;
   max-width: 300px;
+  height: auto;
   border-radius: 50%;
   border: 10px solid var(--border-colour);
 }
@@ -237,17 +237,19 @@ main {
 /* main - projects */
 #main-content {
   display: flex;
-  height: 100%;
-  flex-direction: column;
+  min-height: 100%;
+  margin-inline: auto;
+  justify-content: center;
   align-items: center;
-  padding: 0 10em;
+  flex-direction: column;
   border-top: 1px solid var(--border-colour);
 }
 
 #main-section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  width: 50%;
+  max-width: 75rem;
+  padding: 20px;
   gap: 2rem;
 }
 
@@ -255,10 +257,24 @@ main {
   font-size: 1em;
 }
 
+.project-image {
+  max-width: 300px;
+  height: auto;
+}
+
+a h4 {
+  font-size: 1em;
+}
+
+a p {
+  font-size: 0.9em;
+}
+
 .project-card {
   border: 1px solid var(--border-colour);
   flex-basis: calc(100% / 4);
-  max-height: 500px;
+  max-width: 100%;
+  max-height: 400px;
   display: flex;
   flex-direction: column;
   padding: 2rem;
@@ -266,13 +282,14 @@ main {
 
 .tech-stack {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.5rem;
-  font-size: 0.7rem;
   color: var(--hover-colour);
+  margin-top: 1.5rem;
 }
 
-.tech-stack i:hover {
-  color: white;
+.tech-stack i {
+  font-size: 2.25em;
 }
 
 @media(max-width: 1404px) {
@@ -305,9 +322,16 @@ main {
   }
 
   #about-png {
-    max-height: 230px;
     max-width: 230px;
     border: 6px solid var(--border-colour);
+  }
+  
+  #main-section {
+    max-width: 60rem;
+  }
+  
+  .tech-stack i {
+    font-size: 2em;
   }
 }
 
@@ -347,6 +371,23 @@ main {
   #about-info p {
     padding: 3rem;
   }
+
+  #main-section {
+    max-width: 45rem;
+  }
+  
+  #main-section a {
+    font-size: 0.75em;
+  }
+
+  .project-image {
+    max-width: 250px;
+    height: auto;
+  }
+  
+  .tech-stack {
+    font-size: 0.63rem;
+  }
 }
 
 @media(max-width: 900px) {
@@ -377,7 +418,7 @@ main {
 
   .linkedin {
     font-size: 1.6em;
-    padding-right: 0px;
+    padding-right: 0;
   }
 
   .mail {
@@ -390,9 +431,41 @@ main {
   }
 
   #about-png {
-    max-height: 150px;
     max-width: 150px;
     border: 6px solid var(--border-colour);
+  }
+
+  #main-section {
+    display: flex;
+    flex-direction: column;
+    max-width: 35rem;
+  }
+
+  .project-card > a {
+    display: flex;
+  }
+
+  .project-image {
+    max-width: 125px;
+    height: auto;
+  }
+
+  a h4 {
+    font-size: 1em;
+    margin-top: 0.5rem;
+  }
+  
+  a p {
+    font-size: 0.9em;
+    margin: 0;
+  }
+  
+  .tech-stack {
+    margin-top: 0;
+    font-size: 0.75rem;
+    max-width: 7.5rem;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -456,7 +529,6 @@ main {
   }
 
   #about-png {
-    max-height: 115px;
     max-width: 115px;
     position: absolute;
     top: 40%;
