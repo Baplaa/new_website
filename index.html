@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="./templates/img/favicon.ico" type="image/jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="./templates/css/style.css" type="text/css"/>
     <script defer src="./templates/src/script.js"></script>
@@ -22,12 +22,12 @@
             </a>
         </div>
         <div id="nav-links" class="nav-section">
-            <a href="#about-content">ABOUT</a>
-            <a href="#main-content">PROJECTS</a>
-            <a href="./templates/files/tristan_lingat_resume_feb2024.pdf" target="_blank">RESUME</a>
+            <a class="nav-click" href="#about-content">ABOUT</a>
+            <a class="nav-click" href="#main-content">PROJECTS</a>
+            <a class="nav-click" href="./files/tristan_lingat_resume_feb2024.pdf" target="_blank">RESUME</a>
         </div>
         <button id="nav-button" type="button" onclick="responsiveNav()">
-            <span>MENU</span>
+            <span class="nav-click">MENU</span>
             <i class="fa-solid fa-bars"></i>
         </button>
     </nav>
@@ -66,13 +66,16 @@
                         with a 
                         <span class="strong-highlight">diploma</span> 
                         in the
-                        <span class="strong-highlight">Computer Information Technology (CIT)</span> program.
+                        <a href="https://www.bcit.ca/programs/computer-information-technology-diploma-full-time-5540dipma/" target="_blank">
+                            Computer Information Technology (CIT)
+                        </a>
+                        program.
                         <br><br>
                         I've substantially grown my loving passion for managing hardware and software from youth 
                         through 
                         <span class="strong-highlight">CIT</span> and my 
                         <span class="strong-highlight">Co-op experience</span> at 
-                        <span class="strong-highlight">General Fusion</span>. 
+                        <a href="https://generalfusion.com/" target="_blank">General Fusion</a>. 
                         As such, my accelerated learning has allowed me to be 
                         <span class="strong-highlight">reliable</span>,
                         <span class="strong-highlight">adaptable</span>, and
@@ -90,21 +93,21 @@
                             <img src="./templates/img/music_museum.png" class="project-image">
                             <h4>
                                 <span class="strong-highlight">
-                                    Asynchronous and containerized microservices web application
+                                    Asynchronous, 6-containerized microservices web application hosted via Azure
                                 </span>
                             </h4>
                             <p>
-                                Music Museum allows users to POST music singles and albums 
-                                and retrieve them for content viewing using GET methods.
+                                Music Museum receives, stores, processes, and audits API requests—in the form of 
+                                music singles and albums—from clients.
                             </p>
                         </div>
                         <div class="tech-stack">
                             <i class="devicon-apachekafka-original-wordmark"></i>
                             <i class="devicon-azure-plain-wordmark"></i>
-                            <i class="devicon-docker-plain-wordmark"></i>
-                            <i class="devicon-javascript-plain"></i>
-                            <i class="devicon-html5-plain-wordmark"></i>
                             <i class="devicon-css3-plain-wordmark"></i>
+                            <i class="devicon-docker-plain-wordmark"></i>
+                            <i class="devicon-html5-plain-wordmark"></i>
+                            <i class="devicon-javascript-plain"></i>
                             <i class="devicon-jenkins-plain"></i>
                             <i class="devicon-nginx-original-wordmark"></i>
                             <i class="devicon-python-plain-wordmark"></i>
@@ -112,83 +115,64 @@
                     </a>
                 </div>
                 <div class="project-card">
-                    <a href="https://github.com/Baplaa/music_museum" target="_blank">
+                    <a href="https://github.com/Baplaa/provisioning" target="_blank">
                         <div>
-                            <img src="./templates/img/music_museum.png" class="project-image">
+                            <img src="./templates/img/aws_web_app.png" class="project-image">
                             <h4>
                                 <span class="strong-highlight">
-                                    Asynchronous and containerized microservices web application
+                                    Full-stack provisioned web application hosted via AWS
                                 </span>
                             </h4>
                             <p>
-                                Music Museum allows users to POST music singles and albums 
-                                and retrieve them for content viewing using GET methods.
+                                Using Terraform and Ansible, this web application displays
+                                any RDS-injected student name and student ID on a web page.
                             </p>
                         </div>
                         <div class="tech-stack">
-                            <i class="devicon-apachekafka-original-wordmark"></i>
-                            <i class="devicon-azure-plain-wordmark"></i>
-                            <i class="devicon-docker-plain-wordmark"></i>
-                            <i class="devicon-javascript-plain"></i>
+                            <i class="devicon-amazonwebservices-plain-wordmark"></i>
+                            <i class="devicon-ansible-plain-wordmark"></i>
+                            <i class="devicon-dynamodb-plain"></i>
+                            <i class="devicon-flask-original-wordmark"></i>
                             <i class="devicon-html5-plain-wordmark"></i>
-                            <i class="devicon-css3-plain-wordmark"></i>
-                            <i class="devicon-jenkins-plain"></i>
-                            <i class="devicon-nginx-original-wordmark"></i>
-                            <i class="devicon-python-plain-wordmark"></i>
+                            <i class="devicon-terraform-plain-wordmark"></i>
                         </div>
                     </a>
                 </div>
                 <div class="project-card">
-                    <a href="https://github.com/Baplaa/music_museum" target="_blank">
+                    <a href="https://github.com/Baplaa/ci-cd-projs" target="_blank">
                         <div>
-                            <img src="./templates/img/music_museum.png" class="project-image">
+                            <img src="./templates/img/ci_cd_projs.png" class="project-image">
                             <h4>
                                 <span class="strong-highlight">
-                                    Asynchronous and containerized microservices web application
+                                    A collection of CI/CD pipelines made with GitLab and Jenkins
                                 </span>
                             </h4>
                             <p>
-                                Music Museum allows users to POST music singles and albums 
-                                and retrieve them for content viewing using GET methods.
+                                4 different CI/CD pipelines developed for dockerized Python applications 
+                                and 1 as a supplementary pipeline for Music Museum.
                             </p>
                         </div>
                         <div class="tech-stack">
-                            <i class="devicon-apachekafka-original-wordmark"></i>
                             <i class="devicon-azure-plain-wordmark"></i>
                             <i class="devicon-docker-plain-wordmark"></i>
-                            <i class="devicon-javascript-plain"></i>
-                            <i class="devicon-html5-plain-wordmark"></i>
-                            <i class="devicon-css3-plain-wordmark"></i>
+                            <i class="devicon-gitlab-plain-wordmark"></i>
                             <i class="devicon-jenkins-plain"></i>
-                            <i class="devicon-nginx-original-wordmark"></i>
                             <i class="devicon-python-plain-wordmark"></i>
+                            <i class="devicon-sonarqube-plain-wordmark"></i>
                         </div>
                     </a>
                 </div>
-                <div class="project-card">
-                    <a href="https://github.com/Baplaa/music_museum" target="_blank">
+                <div class="project-card github-card">
+                    <a href="https://github.com/Baplaa?tab=repositories" target="_blank">
                         <div>
-                            <img src="./templates/img/music_museum.png" class="project-image">
-                            <h4>
-                                <span class="strong-highlight">
-                                    Asynchronous and containerized microservices web application
-                                </span>
-                            </h4>
-                            <p>
-                                Music Museum allows users to POST music singles and albums 
-                                and retrieve them for content viewing using GET methods.
-                            </p>
+                            <i class="devicon-github-original-wordmark github"></i>
                         </div>
-                        <div class="tech-stack">
-                            <i class="devicon-apachekafka-original-wordmark"></i>
-                            <i class="devicon-azure-plain-wordmark"></i>
-                            <i class="devicon-docker-plain-wordmark"></i>
-                            <i class="devicon-javascript-plain"></i>
-                            <i class="devicon-html5-plain-wordmark"></i>
-                            <i class="devicon-css3-plain-wordmark"></i>
-                            <i class="devicon-jenkins-plain"></i>
-                            <i class="devicon-nginx-original-wordmark"></i>
-                            <i class="devicon-python-plain-wordmark"></i>
+                        <div id="github-msg">   
+                            <h2>
+                                <span class="strong-highlight">
+                                    Visit my GitHub for more projects!
+                                </span>
+                            </h2>
                         </div>
                     </a>
                 </div>

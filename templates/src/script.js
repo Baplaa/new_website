@@ -46,3 +46,17 @@ window.matchMedia("(max-width: 682px)").onchange = e => {
     nav.dataset.transitionable = "false";
     nav.dataset.toggled = "false";
 }
+
+var links = document.querySelectorAll(".nav-click");
+
+links.forEach(function(link) {
+  link.addEventListener("click", function(event) {
+    this.classList.toggle("clicked");
+
+    if (this.classList.contains("clicked")) {
+      setTimeout(() => {
+        this.classList.remove("clicked");
+      }, 500);
+    }
+  });
+});

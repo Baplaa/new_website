@@ -65,6 +65,13 @@ a {
   text-decoration: none;
 }
 
+#about-info a {
+  font-size: 1em;
+  font-family: Vollkorn, serif;
+  color: var(--hover-colour);
+  text-decoration: underline;
+}
+
 i {
   display: flex;
   justify-content: center;
@@ -73,20 +80,21 @@ i {
 
 .strong-highlight {
   color: var(--hover-colour);
-  text-decoration: underline;
 }
 
 address a {
   font-size: 1.25em;
   font-family: Vollkorn, serif;
+  color: var(--hover-colour);
+  text-decoration: underline;
 }
 
 a:hover {
   color: var(--hover-colour);
 }
 
-address a:hover {
-  text-decoration: underline;
+a.clicked {
+  color: var(--hover-colour);
 }
 
 /* nav */
@@ -203,6 +211,7 @@ main {
   font-size: 3.5em; 
   padding-left: 20px;
   border-left: 1px solid var(--border-colour);
+  color: white;
 }
 
 .linkedin {
@@ -290,6 +299,21 @@ a p {
 
 .tech-stack i {
   font-size: 2.25em;
+}
+
+.github-card {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.github {
+  font-size: 10em;
+  color: white;
+}
+
+.github-card h2 {
+  margin-bottom: 0;
 }
 
 @media(max-width: 1404px) {
@@ -467,6 +491,24 @@ a p {
     justify-content: center;
     align-items: center;
   }
+
+  .github-card {
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .github {
+    font-size: 6.5em;
+    color: white;
+  }
+  
+  .github-card h2 {
+    font-size: 1.75em;
+  }
+
+  #github-msg {
+    max-width: 15rem;
+  }
 }
 
 @media(max-width: 682px) {
@@ -512,7 +554,7 @@ a p {
   }
 
   #about-content {
-    height: 100%;
+    height: auto;
   }
 
   #about-section { 
@@ -569,10 +611,6 @@ a p {
 }
 
 @media(max-width: 480px) {
-  #about-content {
-    height: 100%;
-  }
-
   #about-section { 
     max-width: 22rem;
   }
@@ -615,21 +653,46 @@ a p {
     padding: 2rem;
   }
 
-  @media(max-width: 380px) {
-    .linkedin {
-      font-size: 1.7em;
-    }
-
-    #about-png {
-      max-height: 75px;
-      max-width: 75px;
-    }
+  .github {
+    font-size: 4em;
+  }
+  
+  .github-card h2 {
+    font-size: 1.2em;
   }
 
-  @media(max-width: 320px) {
-    #about-png {
-      top: 55%;
-      left: 85%;
-    }
+  #github-msg {
+    max-width: 10rem;
+  }
+}
+
+@media(max-width: 380px) {
+  .linkedin {
+    font-size: 1.7em;
+  }
+
+  #about-png {
+    max-height: 75px;
+    max-width: 75px;
+  }
+}
+
+@media(max-width: 320px) {
+  #about-png {
+    top: 55%;
+    left: 85%;
+  }
+
+  .github {
+    font-size: 3em;
+  }
+  
+  .github-card h2 {
+    font-size: 1em;
+    margin-left: 0.5rem;
+  }
+
+  #github-msg {
+    max-width: 7.5rem;
   }
 }
